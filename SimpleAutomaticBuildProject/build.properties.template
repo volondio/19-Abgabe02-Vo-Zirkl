@@ -1,6 +1,0 @@
-name = Christian and Lisa
-src = ./src
-bin = ./build-ant
-jarF = ./lib
-jName = 19-Abgabe02-Vo-Zirkl.jar
-
