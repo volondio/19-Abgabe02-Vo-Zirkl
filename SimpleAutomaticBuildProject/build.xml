@@ -4,22 +4,25 @@
     <target name="clean">
         <delete dir="${bin}"/>
         <delete dir="${jarF}"/>
-
     </target>
 
 
-    <!-- first target which creates directories for later usage -->
-    <!-- read more about: https://ant.apache.org/manual/targets.html -->
     <target name="init">
         <mkdir dir="${bin}"/>
         <mkdir dir="${jarF}"/>
     </target>
 
-
-
-
-    <!-- compiles defined java src files and store them into destination directory -->
     <target name="compile" depends="init">
-        <javac srcdir="src" destdir="build-ant" includeantruntime="false"/>
+        <javac srcdir="${src}" destdir="${bin}" includeantruntime="false"/>
     </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="${jarF}/${jName}" basedir="${bin}">
+            <manifest>
+                <attribute name="Main-Class" value="at.fhj.iit.Main" />
+            </manifest>
+        </jar>
+    </target>
+
+
 </project>
