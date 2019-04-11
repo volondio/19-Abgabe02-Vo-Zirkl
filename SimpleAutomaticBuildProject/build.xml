@@ -1,3 +1,4 @@
 <project name="19-Abgabe02-Vo-Zirkl">
-    
+    <property file = "build.properties"/>
+
 </project>
