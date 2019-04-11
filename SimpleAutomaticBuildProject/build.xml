@@ -4,6 +4,7 @@
     <target name="clean">
         <delete dir="${bin}"/>
         <delete dir="${jarF}"/>
+        <delete dir="install"/>
     </target>
 
 
