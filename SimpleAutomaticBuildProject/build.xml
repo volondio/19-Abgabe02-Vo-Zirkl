@@ -23,6 +23,9 @@
             </manifest>
         </jar>
     </target>
-
+    <target name="run" depends="jar">
+        <echo message="Attempting to run!"/>
+        <java jar="${jarF}/${jName}" output=" output.txt" fork="true"/>
+    </target>
 
 </project>
