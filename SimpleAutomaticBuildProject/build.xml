@@ -23,6 +23,15 @@
             </manifest>
         </jar>
     </target>
+    
+    <target name="install" depends="jar">
+        <mkdir dir="install"/>
+        <copy file="${jarF}/${jName}" todir="install"/>
+
+    </target>
+
+
+
     <target name="run" depends="jar">
         <echo message="Attempting to run!"/>
         <java jar="${jarF}/${jName}" output=" output.txt" fork="true"/>
