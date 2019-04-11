@@ -23,7 +23,7 @@
             </manifest>
         </jar>
     </target>
-    
+
     <target name="install" depends="jar">
         <mkdir dir="install"/>
         <copy file="${jarF}/${jName}" todir="install"/>
